@@ -62,7 +62,7 @@ function onDarkModeChanged(event) {
 }
 
 function animate() {
-  logo.rotate.x = -Zdog.TAU/8;
+  logo.rotate.x = -Zdog.TAU/12;
   logo.updateRenderGraph();
   requestAnimationFrame(animate);
 }
