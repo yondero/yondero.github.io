@@ -15,7 +15,6 @@ const defaults = {
 
 let logo = new Zdog.Illustration({
   element: '#logo',
-  dragRotate: true,
   rotate: { x: -Zdog.TAU/8, y: -Zdog.TAU/8 },
 });
 
@@ -63,6 +62,7 @@ function onDarkModeChanged(event) {
 
 function animate() {
   logo.rotate.x = -Zdog.TAU/12;
+  logo.rotate.y += 0.005;
   logo.updateRenderGraph();
   requestAnimationFrame(animate);
 }
