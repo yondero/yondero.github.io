@@ -1,6 +1,6 @@
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  font-size: 16px;
+  padding: 0 20px;
 }
 
 h1 {
@@ -15,6 +15,11 @@ h3 {
   font-style: 1.4rem;
 }
 
+a {
+  color: #20b3f7;
+  font-size: 1.2rem;
+}
+
 p {
   margin: 0;
   font-size: 1.5rem;
@@ -23,10 +28,19 @@ p {
 
 section {
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 80px;
-  text-align: center
+  margin: 20px auto;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 4px dashed #ddd;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
