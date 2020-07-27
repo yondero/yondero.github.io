@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Decentralized Developer Platform">
+<meta name="keywords" content="blockchain, distributed, decentralized, p2p, web3, open source, software, developer">
+<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    
+<link rel="stylesheet" href="https://yondero.co/sass/main.min.661cfa4546f0e8d1e932d71de2f53b52c00c24c5694a327ceb798b3764692a2e.css">
+    <title>Yondero | Repository</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+        <a class="navbar-item" href="/">
+          <img src="/images/logo.png" alt="Yondero" height="28">
+        </a>
+      
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-white is-medium" href="https://github.com/yondero">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+            </a>
+            <a class="button is-white is-medium" href="https://twitter.com/YonderoCo">
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+            </a>
+            
+              <a class="button is-white is-medium" href="/docs">Docs</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <aside class="menu">
+  <p class="menu-label">Contracts</p>
+  <ul class="menu-list">
+    <li>
+      
+        <a href="/docs/contracts/repository">Repository</a>
+      
+    </li>
+  </ul>
+</aside>
+
+        </div>
+        <div class="column">
+          <div class="container content">
+            <h1 id="repository">Repository</h1>
+<hr>
+<p>Contract for managing repositories.</p>
+<blockquote>
+<p>Branches and tags are stored in <code>references</code>.
+References are stored as a hash of the reference name.
+Changes are stored as the content id hash.
+Historical changes are tracked through <code>ReferenceChanged</code> events.
+Inherits from OpenZepplin <code>AccessControl</code>.</p>
+</blockquote>
+<h5 id="roles">Roles</h5>
+<ul>
+<li><code>DEFAULT_ADMIN_ROLE</code> allows account to grant or revoke roles</li>
+<li><code>CONTRIBUTOR_ROLE</code> allows account to push changes</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<hr>
+<h4 id="bytes32-contributor_role"><code>bytes32 CONTRIBUTOR_ROLE</code></h4>
+<h4 id="mappingbytes32--bytes32-references"><code>mapping(bytes32 =&gt; bytes32) references</code></h4>
+<h2 id="functions">Functions</h2>
+<hr>
+<h4 id="constructor-public"><code>constructor()</code> (public)</h4>
+<p>Creates a new empty repository.</p>
+<blockquote>
+<p>Assigns <code>DEFAULT_ADMIN_ROLE</code> and <code>CONTRIBUTOR_ROLE</code> to the sender.</p>
+</blockquote>
+<h4 id="pushbytes32-ref-bytes32-cid-public"><code>push(bytes32 ref, bytes32 cid)</code> (public)</h4>
+<p>Push changes to a reference.</p>
+<blockquote>
+<p>Requires the <code>CONTRIBUTOR_ROLE</code>. Emits a <code>ReferenceChanged</code> event.</p>
+</blockquote>
+<h5 id="params">Params</h5>
+<ul>
+<li><code>ref</code> reference hash</li>
+<li><code>cid</code> content id hash</li>
+</ul>
+<h2 id="events">Events</h2>
+<hr>
+<h4 id="referencechangedbytes32-ref-bytes32-cid-address-sender"><code>ReferenceChanged(bytes32 ref, bytes32 cid, address sender)</code></h4>
+<p>Event used to store reference changes.</p>
+<blockquote>
+<p>Subscribe to this event to track change history.</p>
+</blockquote>
+<h5 id="params-1">Params</h5>
+<ul>
+<li><code>ref</code> reference hash</li>
+<li><code>cid</code> content id hash</li>
+<li><code>sender</code> address of the sender</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+  </body>
+</html>
